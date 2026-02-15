@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int factorial(int n) {
+    int fact = 1, i;
+    for(i = 1; i <= n; i++)
+        fact *= i;
+    return fact;
+}
+
+int main() {
+    int N, temp, sum = 0;
+    scanf("%d", &N);
+    temp = N;
+    while(temp > 0) {
+        int digit = temp % 10;
+        sum += factorial(digit);
+        temp /= 10;
+    }
+    if(sum == N)
+        printf("Strong Number");
+    else
+        printf("Not a Strong Number");
+    return 0;
+}
