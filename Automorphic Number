@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int N, square, temp;
+    scanf("%d", &N);
+    square = N * N;
+    temp = N;
+    while(temp > 0) {
+        if(temp % 10 != square % 10) {
+            printf("Not an Automorphic Number");
+            return 0;
+        }
+        temp /= 10;
+        square /= 10;
+    }
+
+    printf("Automorphic Number");
+}
