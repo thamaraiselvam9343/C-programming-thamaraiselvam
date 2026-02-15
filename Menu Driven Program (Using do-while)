@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+    int choice;
+    int a = 10, b = 5;   // Example numbers
+    do {
+        scanf("%d", &choice);
+        switch(choice) {
+            case 1:
+                printf("Performing Addition\n");
+                printf("Result = %d\n", a + b);
+                break;
+            case 2:
+                printf("Performing Subtraction\n");
+                printf("Result = %d\n", a - b);
+                break;
+            case 3:
+                printf("Performing Multiplication\n");
+                printf("Result = %d\n", a * b);
+                break;
+            case 4:
+                printf("Exiting Program\n");
+                break;
+            default:
+                printf("Invalid Option\n");
+        }
+    } while(choice != 4);
+}
