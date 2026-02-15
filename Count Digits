@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int N;
+    int count = 0;
+
+    scanf("%d", &N);
+
+    if (N == 0) {
+        count = 1;
+    } else {
+        while (N > 0) {
+            N = N / 10;
+            count++;
+        }
+    }
+    printf("%d", count);
+}
